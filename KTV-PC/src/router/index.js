@@ -15,52 +15,90 @@ const routes = [
   {
     path: '/index',
     name: 'Index',
-    component: Index
+    component: Index,
+    meta: {
+      keepAlive: true
+    }
   },
   {
     path: '/header',
     name: 'Header',
-    component: Header
+    component: Header,
+    meta: {
+      keepAlive: true
+    }
   },
   {
     path: '/footer',
     name: 'Footer',
-    component: Footer
+    component: Footer,
+    meta: {
+      keepAlive: true
+    }
   },
   {
     path: '/contactnav',
     name: 'Contactnav',
-    component: Contactnav
+    component: Contactnav,
+    meta: {
+      keepAlive: true
+    }
   },
   {
     path: '/aboutus',
     name: 'Aboutus',
-    component: () => import('../components/Aboutus.vue')
+    component: () => import('../components/Aboutus.vue'),
+    meta: {
+      keepAlive: true
+    }
   },
   {
     path: '/showmodel',
     name: 'Showmodel',
-    component: () => import('../components/Showmodel.vue')
+    component: () => import('../components/Showmodel.vue'),
+    meta: {
+      keepAlive: true
+    }
   },
   {
     path: '/showenviron',
     name: 'Showenviron',
-    component: () => import('../components/Showenviron.vue')
+    component: () => import('../components/Showenviron.vue'),
+    meta: {
+      keepAlive: false
+    }
+  },
+  {
+    path: '/environdetail/:id',
+    name: 'Environdetail',
+    component: () => import('../components/Environdetail.vue'),
+    meta: {
+      keepAlive: false
+    }
   },
   {
     path: '/nightnews',
     name: 'Nightnews',
-    component: () => import('../components/Nightnews.vue')
+    component: () => import('../components/Nightnews.vue'),
+    meta: {
+      keepAlive: true
+    }
   },
   {
     path: '/contactus',
     name: 'Contactus',
-    component: () => import('../components/Contactus.vue')
+    component: () => import('../components/Contactus.vue'),
+    meta: {
+      keepAlive: true
+    }
   },
   {
     path: '/recruit',
     name: 'Recruit',
-    component: () => import('../components/Recruit.vue')
+    component: () => import('../components/Recruit.vue'),
+    meta: {
+      keepAlive: true
+    }
   }
 ]
 

@@ -1,10 +1,9 @@
 <template>
   <!-- 福利 开始 -->
   <div class="welfare">
-    <img src="../assets/img/image-10.jpg" class="img-bg">
+    <img :src="baseURL + info.image" class="img-bg">
     <div class="text">
-      <p>全场所有啤酒均可享受买二送一，还有更多豪礼等着你!</p>
-      <p>当晚本包间消费满6666以上，当晚可赠送豪华名宿酒店一套，限当天使用。</p>
+      <VueMarkdown :source="info.content"></VueMarkdown>
       <div class="what-room">小包低消1080元 中包低消1280 大包低消1380 豪包低消2680</div>
     </div>
     <img src="../assets/img/patrick.png" class="code">
@@ -15,3 +14,27 @@
 <style scoped>
 @import '../assets/css/common.css';
 </style>
+<script>
+import VueMarkdown from 'vue-markdown'
+export default {
+  data () {
+    return {
+      info: {}
+    }
+  },
+  mounted () {
+    this.$http.get('/carousel_map/list').then(res => {
+      res.some((val, index) => {
+        if (index === 0) {
+          val.content = val.content.replace(/#/g, '')
+          this.info = val
+          return true
+        }
+      })
+    })
+  },
+  components: {
+    VueMarkdown
+  }
+}
+</script>

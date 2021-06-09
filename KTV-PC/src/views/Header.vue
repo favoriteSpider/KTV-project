@@ -5,14 +5,8 @@
       <div class="logo fl">
         <img src="../assets/img/image_3.png" alt="" />
       </div>
-      <ul class="fl clearfix">
-        <li><a href="javascript:;" class="active" @click="index">首页</a></li>
-        <li><a href="javascript:;" @click="aboutUs">关于我们</a></li>
-        <li><a href="javascript:;" @click="showModel">模特展示</a></li>
-        <li><a href="javascript:;" @click="showEnviron">环境展示</a></li>
-        <li><a href="javascript:;" @click="nightNews">夜场新闻</a></li>
-        <li><a href="javascript:;" @click="contactUs">联系我们</a></li>
-        <li><a href="javascript:;" @click="recruit">招聘要求</a></li>
+      <ul class="fl clearfix" ref="list">
+        <li v-for="(val, index) in theUrl" :key="index"><router-link :to="val.path">{{val.label}}</router-link></li>
       </ul>
       <div class="fr phone-num">
         <img src="../assets/img/7877635_1538278040.png" class="phone-icon">
@@ -27,27 +21,23 @@
 </style>
 <script>
 export default {
+  data () {
+    return {
+      theUrl: [
+        { path: '/index', label: '首页' },
+        { path: '/aboutus', label: '关于我们' },
+        { path: '/showmodel', label: '模特展示' },
+        { path: '/showenviron', label: '环境展示' },
+        { path: '/nightnews', label: '夜场新闻' },
+        { path: '/contactus', label: '联系我们' },
+        { path: '/recruit', label: '招聘要求' }
+      ],
+      urlId: null
+    }
+  },
   methods: {
-    index () {
-      this.$router.push('/index')
-    },
-    aboutUs () {
-      this.$router.push('/aboutus')
-    },
-    showModel () {
-      this.$router.push('/showmodel')
-    },
-    showEnviron () {
-      this.$router.push('/showenviron')
-    },
-    nightNews () {
-      this.$router.push('/nightnews')
-    },
-    contactUs () {
-      this.$router.push('/contactus')
-    },
-    recruit () {
-      this.$router.push('/recruit')
+    getIndex (index) {
+      this.urlId = index
     }
   }
 }

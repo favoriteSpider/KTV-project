@@ -29,6 +29,7 @@ Axios.interceptors.response.use(res => {
 })
 Vue.prototype.$http = Axios
 Vue.prototype.baseURL = 'http://49.235.93.38:82'
+Vue.prototype.hub = new Vue()
 
 new Vue({
   router,

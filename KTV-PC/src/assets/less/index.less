@@ -9,6 +9,7 @@
   margin: 0 auto;
 }
 
+// 首页 开始
 .index {
   // 固定背景 开始
   .fix-bg {
@@ -278,3 +279,280 @@
   }
   // 新闻 结束
 }
+// 首页 结束
+
+// 环境展示 开始
+.show-environ,
+.environ-detail {
+  .where-you {
+    margin-top: 10./@rem;
+    padding: 8./@rem 0 8./@rem 10./@rem;
+    background-color: #f8f8f8;
+    font-size: 14./@rem;
+    color: #333;
+    .arrow {
+      color: #2090FF;
+    }
+  }
+  .btn {
+    .setwh(159,30);
+    line-height: 30./@rem;
+    margin: 15./@rem 0 22./@rem;
+    border: 1px solid #f7f7f7;
+    font-size: 14./@rem;
+    color: #333;
+    text-align: center;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    &:hover a {
+      color: #2090FF;
+    }
+  }
+  .show-style {
+    &>ul>li {
+      float: left;
+      .setwh(290,360);
+      padding: 50./@rem 10./@rem 0;
+      border: 1px solid #f7f7f7;
+      margin-right: 10./@rem;
+      box-sizing: border-box;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      .pic {
+        .setwh(281,211);
+        line-height: 211./@rem;
+        text-align: center;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .text {
+        margin-top: 50./@rem;
+        font-size: 14./@rem;
+        color: #555;
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+    .page-box {
+      margin: 20./@rem 0;
+      text-align: center;
+      .total,
+      .first-page,
+      .previous,
+      .next,
+      .last-page {
+        display: inline-block;
+        margin-left: 5./@rem;
+        padding: 5./@rem 10./@rem;
+        border: 1./@rem solid #DDD;
+        font: 400 12./@rem/1 'Microsoft Yahei';
+        vertical-align: top;
+        color: #AAA;
+        background-color: #FFF;
+        cursor: not-allowed;
+      }
+      .page {
+        display: inline-block;
+        li {
+          margin-left: 5./@rem;
+          padding: 4./@rem 10./@rem;
+          border: 1./@rem solid #DDD;
+          color: #fff;
+        }
+        li:first-of-type {
+          background-color: #ccc;
+        }
+      }
+    }
+  }
+}
+.environ-detail {
+  .where-you {
+    margin-top: 0;
+    a:last-of-type {
+      color: #2090FF;
+    }
+  }
+  h1 {
+    margin: 20./@rem 0;
+    font-size: 18./@rem;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+  }
+  .watch-pic {
+    .pic {
+      position: relative;
+      .setwh(400,400);
+      line-height: 310./@rem;
+      border: 1px solid #f8f8f8;
+      text-align: center;
+      .mask {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        .setwh(200, 200);
+        opacity: .5;
+        background-color: #fc980f;
+        cursor: move;
+      }
+      .small-pic {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      .big-pic {
+        display: none;
+        position: absolute;
+        right: -300./@rem;
+        top: 0;
+        .setwh(300,300);
+        background-color: #f8f8f8;
+        overflow: hidden;
+        img {
+          position: absolute;
+          width: 300%;
+          height: 300%;
+          object-fit: contain;
+        }
+      }
+    }
+    .price {
+      width: 760./@rem;
+      padding: 5./@rem 0;
+      margin-left: 15./@rem;
+      background-color: #f8f8f8;
+      color: #666;
+      font-size: 16./@rem;
+    }
+  }
+  .share {
+    width: 420./@rem;
+    margin-top: 10./@rem;
+    li {
+      float: right;
+      .setwh(16,16);
+      margin-right: 10./@rem;
+      background: url("../img/top_logos_sprite.png") no-repeat;
+      &:hover {
+        box-shadow: 1px 1px 20./@rem rgba(255,255,255,.5) inset;
+      }
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    li:last-of-type {
+      background: url("../img/weixin.png") no-repeat;
+      background-size: 16./@rem 16./@rem;
+    }
+    li:nth-of-type(4) {
+      background-position: 0 -216./@rem;
+    }
+    li:nth-of-type(3) {
+      background-position: 0 -234./@rem;
+    }
+    li:nth-of-type(2) {
+      background-position: 0 -270./@rem;
+    }
+    li:nth-of-type(1) {
+      background-position: 0 0;
+    }
+  }
+  .share-wechat {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -110./@rem;
+    margin-top: -122./@rem;
+    .setwh(210,230);
+    border: 6./@rem solid #888;
+    border-radius: 5./@rem;
+    z-index: 99;
+    box-sizing: border-box;
+    .head {
+      padding: 5./@rem 12./@rem;
+      background-color: #f8f8f8;
+      color: #666;
+      font-size: 12./@rem;
+      box-sizing: border-box;
+      .close {
+        font-weight: 700;
+      }
+    }
+    .code {
+      .setwh(198,190);
+      padding: 15./@rem;
+      box-sizing: border-box;
+      background-color: #fff;
+    }
+  }
+  .explain {
+    width: 100%;
+    margin: 20./@rem 0 20./@rem;
+    font-size: 14./@rem;
+    border: 1px solid #f8f8f8;
+    color: #444;
+    box-sizing: border-box;
+    .text {
+      margin-bottom: 10./@rem;
+      padding: 15./@rem 0 15./@rem 20./@rem;
+      background-color: #f8f8f8;
+    }
+    .pic {
+      padding: 0 0 15./@rem 10./@rem;
+      .setwh(860,545);
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  .correlation {
+    .title {
+      width: 100%;
+      padding: 0 0 10./@rem 10./@rem;
+      border-bottom: 1px dashed #ccc;
+      font-size: 16./@rem;
+      color: #333;
+    }
+    ul {
+      margin: 10./@rem 0 60./@rem;
+      width: 100%;
+      overflow: hidden;
+      li {
+        float: left;
+        margin-right: 25./@rem;
+        text-align: center;
+        .pic {
+          .setwh(200,200);
+          line-height: 200./@rem;
+          border: 1px solid #f8f8f8;
+          overflow: hidden;
+          text-align: center;
+        }
+        .text {
+          margin-top: 20./@rem;
+          font-size: 14./@rem;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+// 环境展示 结束
