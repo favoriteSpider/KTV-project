@@ -5,20 +5,7 @@
     <!-- 固定背景 开始 -->
     <div class="fix-bg"></div>
     <!-- 固定背景 结束 -->
-
-    <!-- 福利 开始 -->
-    <div class="welfare">
-      <img src="../assets/img/image-10.jpg" class="img-bg">
-      <div class="text">
-        <p>全场所有啤酒均可享受买二送一，还有更多豪礼等着你!</p>
-        <p>当晚本包间消费满6666以上，当晚可赠送豪华名宿酒店一套，限当天使用。</p>
-        <div class="what-room">小包低消1080元 中包低消1280 大包低消1380 豪包低消2680</div>
-      </div>
-      <img src="../assets/img/patrick.png" class="code">
-      <div class="telphone">T: 13688143752</div>
-    </div>
-    <!-- 福利 结束 -->
-
+    <my-welfare></my-welfare>
     <!-- 环境 开始 -->
     <div class="environ">
       <div class="w1200">
@@ -104,6 +91,7 @@
 import Head from './Header.vue'
 import Foot from './Footer.vue'
 import Contactnav from './Contactnav.vue'
+import Welfare from './Welfare.vue'
 export default {
   data () {
     return {
@@ -152,7 +140,8 @@ export default {
   components: {
     myHead: Head,
     myFoot: Foot,
-    mySubnav: Contactnav
+    mySubnav: Contactnav,
+    myWelfare: Welfare
   }
 }
 </script>

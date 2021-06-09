@@ -31,6 +31,36 @@ const routes = [
     path: '/contactnav',
     name: 'Contactnav',
     component: Contactnav
+  },
+  {
+    path: '/aboutus',
+    name: 'Aboutus',
+    component: () => import('../components/Aboutus.vue')
+  },
+  {
+    path: '/showmodel',
+    name: 'Showmodel',
+    component: () => import('../components/Showmodel.vue')
+  },
+  {
+    path: '/showenviron',
+    name: 'Showenviron',
+    component: () => import('../components/Showenviron.vue')
+  },
+  {
+    path: '/nightnews',
+    name: 'Nightnews',
+    component: () => import('../components/Nightnews.vue')
+  },
+  {
+    path: '/contactus',
+    name: 'Contactus',
+    component: () => import('../components/Contactus.vue')
+  },
+  {
+    path: '/recruit',
+    name: 'Recruit',
+    component: () => import('../components/Recruit.vue')
   }
 ]
 
