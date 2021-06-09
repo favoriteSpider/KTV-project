@@ -1,39 +1,200 @@
 @rem: 100rem;
 /* 样式初始化 */
 
-* {
-  padding: 0;
-  margin: 0;
+.setwh(@w,@h) {
+  width: (@w / @rem);
+  height: (@h / @rem);
+}
+// 版心
+.w1166 {
+  width: (1166 / @rem);
+  margin: 0 auto;
+}
+.w1200 {
+  width: (1200/@rem);
+  margin: 0 auto;
 }
 
-.fl {
-  float: left;
+// 导航栏 开始
+.nav {
+  height: (101 / @rem);
+  line-height: (101 / @rem);
+  background-color: rgb(249, 249, 249);
+  overflow: hidden;
+  .logo {
+    height: 100%;
+    margin-right: (70/@rem);
+    img {
+      .setwh(249,31);
+    }
+  }
+  ul {
+    li {
+      float: left;
+      padding: 0 (23 / @rem);
+      a {
+        display: block;
+        height: (99 / @rem);
+        font-size: (14 / @rem);
+        color: rgb(51, 51, 51);
+      }
+    }
+    li:hover a {
+      color: #00B7D9;
+      border-bottom: (2/@rem) solid #00B7D9;
+    }
+    .active {
+      color: #00B7D9;
+      border-bottom: (2/@rem) solid #00B7D9;
+    }
+  }
+  .phone-num {
+    color: #00B7D9;
+    font-size: (16/@rem);
+    .phone-icon {
+      .setwh(22,22);
+      margin-right: (5/@rem);
+    }
+  }
+}
+// 导航栏 结束
+
+// 侧边栏联系我们 开始
+.subnav {
+  .icon {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: (-73/@rem);
+    .setwh(37,146);
+    background: url('../img/online_service.png') no-repeat 0 (-39/@rem);
+    z-index: 99;
+  }
+  .function {
+    position: fixed;
+    right: 15/@rem;
+    top: 50%;
+    margin-top: -171./@rem;
+    .setwh(84,342);
+    padding: 15./@rem 12./@rem 0;
+    border-radius: 10./@rem;
+    box-shadow: 1px 0 3./@rem #333 inset;
+    z-index: 99;
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+    .arrow1,
+    .arrow2 {
+      .setwh(16,16);
+      margin-bottom: 10./@rem;
+      background: url("../img/online_service.png") no-repeat -68./@rem -16./@rem;
+    }
+    .arrow2 {
+      background: url("../img/online_service.png") no-repeat -84./@rem -16./@rem;
+    }
+    ul {
+      li {
+        padding-top: 5./@rem;
+        margin-bottom: 10./@rem;
+        border-radius: 5./@rem;
+        text-align: center;
+        font-size: 14./@rem;
+        img {
+          .setwh(61,61);
+        }
+        span {
+          margin-top: 5./@rem;
+          color: #000;
+        }
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+    }
+  }
+}
+// 侧边栏联系我们 结束
+
+// footer 开始
+.footer {
+  padding-top: (40/@rem);
+  background-color: rgb(38, 44, 56);
+  .content {
+    padding-bottom: (30/@rem);
+    border-bottom: 1px solid #555;
+    .about-txt {
+      h2 {
+        margin-bottom: (24./@rem);
+        font-weight: 400;
+        font-size: (36/@rem);
+        color: #fff;
+      }
+      p {
+        width: (487/@rem);
+        line-height: (24/@rem);
+        margin-bottom: (47/@rem);
+        font-size: (14/@rem);
+        color: #989898;
+      }
+      .telphone,
+      .place {
+        font-size: (14/@rem);
+        color: #00B7D9;
+      }
+      .telphone {
+        margin-bottom: (6/@rem);
+      }
+    }
+    .code {
+      .setwh(162,162);
+      text-align: center;
+      .text {
+        margin-top: (5/@rem);
+        color: #989898;
+        font-size: (14/@rem);
+      }
+    }
+  }
+  .deep {
+    line-height: (53/@rem);
+    text-align: center;
+    color: rgb(152, 152, 152);
+  }
+}
+// footer 结束
+.show-right {
+  animation: showRight .5s forwards;
+}
+.hide-left {
+  animation: hideLeft .5s forwards;
+}
+.hide {
+  display: none;
+}
+.contact-show {
+  animation: contactShow .5s forwards;
 }
 
-.fr {
-  float: right;
+@keyframes showRight {
+  0% {
+    right: -90./@rem;
+  }
+  100% {
+    right: 15./@rem;
+  }
 }
-
-.clearfix::after {
-  content: "";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+@keyframes hideLeft {
+  0% {
+    right: 15./@rem;
+  }
+  100% {
+    right: -90./@rem;
+  }
 }
-
-.clearfix {
-  *zoom: 1;
-}
-
-li {
-  list-style: none;
-}
-
-img {
-  vertical-align: middle;
-}
-
-a {
-  text-decoration: none;
+@keyframes contactShow {
+  0% {
+    right: 52./@rem;
+  }
+  100% {
+    right: 0;
+  }
 }

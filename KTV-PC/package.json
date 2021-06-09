@@ -10,6 +10,8 @@
   "dependencies": {
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "less": "^3.0.0",
+    "less-loader": "^5.0.0",
     "serve": "^11.3.2",
     "vue": "^2.6.11",
     "vue-layer": "^1.2.5",

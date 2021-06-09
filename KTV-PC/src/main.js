@@ -10,23 +10,25 @@ Vue.config.productionTip = false
 Vue.prototype.$layer = Layer(Vue)
 
 const Axios = axios.create({
+  baseURL: 'http://49.235.93.38:82/index.php/api',
   timeout: 8000,
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded'
   }
 })
 // 拦截器
-Axios.interceptors.request.use(function (config) {
+Axios.interceptors.request.use(config => {
   return config
-}, function (err) {
-  console.log(err)
+}, err => {
+  return err
 })
-Axios.interceptors.request.use(function (res) {
+Axios.interceptors.response.use(res => {
   return res.data
-}, function (err) {
-  console.log(err)
+}, err => {
+  return err
 })
 Vue.prototype.$http = Axios
+Vue.prototype.baseURL = 'http://49.235.93.38:82'
 
 new Vue({
   router,

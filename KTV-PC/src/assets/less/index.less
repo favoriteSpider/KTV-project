@@ -1,0 +1,334 @@
+@rem: 100rem;
+.setwh(@w,@h) {
+  width: (@w / @rem);
+  height: (@h / @rem);
+}
+// 版心
+.w1200 {
+  width: 1200./@rem;
+  margin: 0 auto;
+}
+
+.index {
+  // 固定背景 开始
+  .fix-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: url(../img/banner-1.jpg) repeat center;
+    background-size: (1280/@rem) (768/@rem);
+  }
+  // 固定背景 结束
+
+  // 福利 开始
+  .welfare {
+    position: relative;
+    text-align: center;
+    .img-bg {
+      width: 100%;
+      height: 100%;
+    }
+    .text {
+      position: absolute;
+      left: 50%;
+      top: (130/@rem);
+      .setwh(804, 187);
+      margin-left: (-402/@rem);
+      padding-top: (44/@rem);
+      background-color: rgba(102, 0, 0, .7);
+      box-sizing: border-box;
+      p {
+        line-height: (22/@rem);
+        margin-bottom: (23/@rem);
+        font-size: (22/@rem);
+        color: #fff;
+      }
+      .what-room {
+        font-size: (20/@rem);
+        color: rgb(255, 255, 0);
+      }
+    }
+    .code {
+      position: absolute;
+      left: 50%;
+      bottom: (125/@rem);
+      margin-left: (-67/@rem);
+      .setwh(134, 134);
+    }
+    .telphone {
+      position: absolute;
+      left: 50%;
+      bottom: (64/@rem);
+      margin-left: (-67/@rem);
+      .setwh(134, 46);
+      line-height: (46/@rem);
+      border: 1px solid #d43f3a;
+      background-color: #d9534f;
+      font-size: (16/@rem);
+      color: #fff;
+      &:hover {
+        border: 1px solid #ac2925;
+        background-color: #c9302c;
+      }
+    }
+  }
+  // 福利 结束
+
+  // 环境 开始
+  .environ {
+    padding: 64./@rem 0 120./@rem;
+    background-color: #f3f3f3;
+    text-align: center;
+    h2 {
+      color: #212121;
+      font: normal 700 34./@rem 'blank, tt, Arial, 微软雅黑';
+    }
+    .text {
+      position: relative;
+      margin: 21./@rem 0 100./@rem;
+      font: normal 400 18./@rem 'SimSun';
+      color: #989898;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -20./@rem;
+        left: 50%;
+        margin-left: -18./@rem;
+        .setwh(37,2);
+        background-color: rgb(60, 181, 213);
+      }
+    }
+    ul {
+      li {
+        float: left;
+        margin-right: 30./@rem;
+        background-color: #fff;
+        .setwh(380, 440);
+        &:last-of-type {
+          margin-right: 0;
+        }
+        .pic {
+          width: 100%;
+          height: 221./@rem;
+          overflow: hidden;
+          img {
+            transition: all .5s;
+          }
+          &:hover {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+        h3 {
+          margin: 15./@rem 0 33./@rem;
+          font: normal 700 18./@rem '微软雅黑';
+          color: #666;
+        }
+        .contact-who,
+        .telphone,
+        .address {
+          margin-bottom: 8./@rem;
+          font-size: 14./@rem;
+          font-family: '微软雅黑';
+          color: #989898;
+        }
+        .deep {
+          margin-top: 30./@rem;
+          padding: 0 39./@rem;
+          font-size: 14./@rem;
+          font-family: '微软雅黑';
+          color: #989898;
+          .icon1 {
+            .setwh(20,16);
+          }
+          .icon2 {
+            .setwh(19,19);
+          }
+        }
+      }
+    }
+    .more {
+      .setwh(146,50);
+      line-height: 50./@rem;
+      margin: 80./@rem auto 0;
+      border-radius: 5./@rem;
+      background-color: #3cb5d5;
+      font-weight: 700;
+      font-size: 16./@rem;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+  // 环境 结束
+
+  // 关于 开始
+  .about {
+    margin: 80./@rem auto;
+    padding: 35./@rem 302./@rem 122./@rem;
+    background-color: rgba(0,0,0,.3);
+    text-align: center;
+    box-sizing: border-box;
+    .title {
+      margin-bottom: 49./@rem;
+      font-size: 18./@rem;
+      color: #fff;
+    }
+    h2 {
+      margin-bottom: 65./@rem;
+      color: #fff;
+      font-size: 40./@rem;
+      font-weight: 700;
+    }
+    .text {
+      line-height: 38./@rem;
+      font-size: 18./@rem;
+      color: #fff;
+    }
+    .detail {
+      .setwh(240,45);
+      margin: 100./@rem auto 0;
+      line-height: 45./@rem;
+      border: 2px solid #fff;
+      font-size: 16./@rem;
+      text-align: center;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+  // 关于 结束
+
+  // 模特 开始
+  .model {
+    padding: 60./@rem 0 93./@rem;
+    background-color: rgb(225, 229, 232);
+    text-align: center;
+    h2 {
+      position: relative;
+      margin-bottom: 60./@rem;
+      padding-bottom: 45./@rem;
+      color: #333;
+      font-size: 32./@rem;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -18./@rem;
+        .setwh(37,2);
+        background-color: rgb(60, 181, 213);
+      }
+    }
+    .picture {
+      padding: 10./@rem 52./@rem 40./@rem;
+      border: 1px solid #E0DFDD;
+      background-color: #fff;
+      li {
+        float: left;
+        .setwh(303,442);
+        margin-right: 80./@rem;
+        &:nth-of-type(3n) {
+          margin-right: 0;
+        }
+        &:hover img {
+          border: 1px solid #3B5FCB;
+        }
+        img {
+          width: 100%;
+          height: 400./@rem;
+          border: 1px solid #E0DFDD;
+        }
+        .where-model {
+          margin-top: 14./@rem;
+        }
+      }
+    }
+  }
+  // 模特 结束
+
+  // 新闻 开始
+  .news {
+    padding: 110./@rem 0 100./@rem;
+    background-color: rgb(249, 249, 249);
+    text-align: center;
+    h1 {
+      margin-bottom: 8./@rem;
+      font-size: 32./@rem;
+      color: #333;
+    }
+    .title {
+      position: relative;
+      padding-bottom: 15./@rem;
+      margin-bottom: 58./@rem;
+      font-size: 18./@rem;
+      font-weight: 700;
+      font-family: 'SimSun';
+      color: #989898;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -18./@rem;
+        .setwh(37,2);
+        background-color: rgb(60, 181, 213);
+      }
+    }
+    .content {
+      .big-pic {
+        .setwh(443,480);
+        overflow: hidden;
+      }
+      ul {
+        margin-left: 85./@rem;
+        li {
+          margin-bottom: 25./@rem;
+        }
+        .head-pic {
+          .setwh(100,80);
+          line-height: 80./@rem;
+          margin-right: 38./@rem;
+          border: 1px solid gray;
+          overflow: hidden;
+          &:hover {
+            border: 1px solid #3B5FCB;
+          }
+        }
+        .text {
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            left: -28./@rem;
+            top: 7./@rem;
+            .setwh(9,9);
+            border-radius: 50%;
+            background-color: rgb(60, 181, 213);
+          }
+          h6 {
+            margin-bottom: 3./@rem;
+            font-size: 18./@rem;
+            font-weight: 700;
+            color:rgb(102, 102, 102);
+          }
+          p {
+            width: 308./@rem;
+            font-size: 14./@rem;
+            color: rgb(152, 152, 152);
+            text-align: left;
+            text-indent: 2em;
+          }
+        }
+        .time {
+          margin-left: 50./@rem;
+          font-size: 14./@rem;
+          color: #989898;
+        }
+      }
+    }
+  }
+  // 新闻 结束
+}
